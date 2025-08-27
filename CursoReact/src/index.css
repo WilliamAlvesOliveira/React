@@ -1,3 +1,16 @@
+/*
+  index.css
+
+  Arquivo de estilos globais do projeto.
+  - Contém reset de CSS para padronizar a aparência entre navegadores.
+  - Define cores, fontes e estilos aplicáveis a todo o aplicativo.
+  - Pode incluir classes utilitárias que serão usadas em vários componentes.
+
+  Importante: Sempre importado no main.jsx para que os estilos estejam disponíveis
+  antes do App ser renderizado.
+*/
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
