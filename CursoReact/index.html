@@ -2,12 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Ícone do site (favicon) -->
     <link rel="icon" type="image/svg+xml" href="/cursoReactFavicon.png" />
+
+    <!-- Configurações de responsividade -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da página -->
     <title>React</title>
   </head>
   <body>
+    <!-- 
+      div que será responsável pela renderização do conteúdo React.
+      O id "root" é essencial, pois o React vai procurar esse elemento para "injetar" o app.
+      Pense nessa div como o ponto de entrada do React dentro do HTML.
+    -->
     <div id="root"></div>
+
+    <!-- 
+      Arquivo principal de entrada do React.
+      - type="module" indica que estamos usando módulos ES6, permitindo usar import/export.
+      - src="/src/main.jsx" aponta para o arquivo onde o React inicia e renderiza o App.
+      Esse arquivo normalmente importa o componente principal App.jsx e faz o ReactDOM.render ou createRoot.
+    -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
