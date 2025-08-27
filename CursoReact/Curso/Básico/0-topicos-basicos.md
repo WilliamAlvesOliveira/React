@@ -4,8 +4,8 @@ Este arquivo contém os tópicos básicos de React que você deve estudar.
 Use como checklist e espaço para adicionar suas anotações, comentários e exemplos de código.
 
 ## ✅ Introdução ao React
-- [ ] O que é React e por que usar
-- [ ] Diferença entre SPA e Multi-Page Apps
+- [✅] O que é React e por que usar
+- [✅] Diferença entre SPA e Multi-Page Apps
 
 ## ✅ JSX
 - [ ] Sintaxe JSX
