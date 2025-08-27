@@ -1,0 +1,50 @@
+# Curso React - Nível Avançado
+
+Este arquivo contém os tópicos avançados de React que você deve estudar.  
+Use como checklist e espaço para adicionar suas anotações, comentários e exemplos de código.
+
+## ✅ useReducer
+- [ ] Gerenciar estado complexo
+- [ ] Comparação com useState
+
+## ✅ Context API
+- [ ] Compartilhar estado globalmente
+- [ ] Provider e Consumer
+
+## ✅ Hooks Personalizados
+- [ ] Criar hooks reutilizáveis
+- [ ] Compartilhar lógica entre componentes
+
+## ✅ Performance
+- [ ] React.memo
+- [ ] useCallback
+- [ ] useMemo
+- [ ] Evitar re-render desnecessário
+
+## ✅ Portais e Modais
+- [ ] Renderizar fora da árvore principal
+
+## ✅ Componentes de Ordem Superior (HOC)
+- [ ] Adicionar comportamento a componentes existentes
+
+## ✅ React Router
+- [ ] Navegação entre páginas
+- [ ] Rotas dinâmicas e parâmetros
+
+## ✅ Gerenciamento de Estado Avançado
+- [ ] Redux, Zustand ou Recoil (opcional)
+
+## ✅ Testes em React
+- [ ] Jest + React Testing Library
+- [ ] Testar renderização e eventos
+
+## ✅ Integração com APIs
+- [ ] Fetch / Axios
+- [ ] useEffect para requisições
+- [ ] Tratamento de erros e loading
+
+## ✅ Boas práticas avançadas
+- [ ] Estrutura de pastas escalável
+- [ ] Componentes pequenos e reutilizáveis
+- [ ] Separação de lógica e UI
+- [ ] Comentários didáticos para revisão futura
