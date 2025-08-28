@@ -17,6 +17,7 @@ import './App.css' //importa o app.css
 
 import { useState } from 'react'
 import AulaTeste from './components/aula-teste/AulaTeste'
+import Componente from './components/componentes/componentes'
 
 
 function App() {
@@ -30,11 +31,13 @@ function App() {
       {!pagina && (
         <>
           <button onClick={() => setPagina('aulaTeste')}>Aula Teste</button>
+          <button onClick={() => setPagina('componentes')}>Aula Componente</button>
         </>
       )}
 
       {/* Renderiza a aula escolhida como um "App2" */}
       {pagina === 'aulaTeste' && <AulaTeste />}
+      {pagina === 'componentes' && <Componente />}
    
     </div>
   )

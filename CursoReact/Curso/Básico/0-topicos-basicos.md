@@ -8,15 +8,15 @@ Use como checklist e espaço para adicionar suas anotações, comentários e exe
 - [✅] Diferença entre SPA e Multi-Page Apps
 
 ## ✅ JSX
-- [ ] Sintaxe JSX
-- [ ] Inserção de expressões JS no JSX
-- [ ] Comentários em JSX
+- [✅] Sintaxe JSX
+- [✅] Inserção de expressões JS no JSX
+- [✅] Comentários em JSX
 
 ## ✅ Componentes
-- [ ] Componentes funcionais
-- [ ] Props
-- [ ] Props children
-- [ ] Reutilização de componentes
+- [✅] Componentes funcionais
+- [✅] Props
+- [✅] Props children
+- [✅] Reutilização de componentes
 
 ## ✅ Eventos
 - [ ] onClick, onChange, onSubmit

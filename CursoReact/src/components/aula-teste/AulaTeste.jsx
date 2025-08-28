@@ -7,7 +7,7 @@ function AulaTemplate({ voltar }) {
 
 function NovaAula() {
   return (
-    <>
+    <section className='{nomeDaClasse}'>
       <h2>Título da Aula</h2>
       
       <div>
@@ -19,7 +19,7 @@ function NovaAula() {
           Recarregue a página para voltar ao menu.
         </p>
       </footer>
-    </>
+    </section>
   )
 }
 
@@ -38,9 +38,11 @@ export default NovaAula
       <h2>Template de Aula</h2>
 
       {/* Botão para copiar */}
-      <button onClick={copiarTemplate} style={{ marginBottom: '20px' }}>
-        Copiar Template
-      </button>
+      <div>
+        <button onClick={copiarTemplate} style={{ marginBottom: '20px' }}>
+          Copiar Template
+        </button>
+      </div>
 
       {/* Mostra o template como código */}
       <pre style={{ 
