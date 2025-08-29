@@ -19,14 +19,14 @@ Use como checklist e espaço para adicionar suas anotações, comentários e exe
 - [✅] Reutilização de componentes
 
 ## ✅ Eventos
-- [ ] onClick, onChange, onSubmit
-- [ ] Funções de callback
-- [ ] Arrow function vs chamada direta
+- [✅] onClick, onChange, onSubmit
+- [✅] Funções de callback
+- [✅] Arrow function vs chamada direta
 
 ## ✅ Estado (useState)
-- [ ] Criando e atualizando estado
-- [ ] Estado em componentes filhos
-- [ ] Estado com objetos e arrays
+- [✅] Criando e atualizando estado
+- [✅] Estado em componentes filhos
+- [✅] Estado com objetos e arrays
 
 ## ✅ Renderização condicional
 - [ ] if / else no JSX

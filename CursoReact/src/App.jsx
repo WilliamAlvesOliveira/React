@@ -15,17 +15,19 @@
 
 import './App.css' //importa o app.css
 
-import { useState } from 'react'
+import {useState } from 'react'
 import AulaTeste from './components/aula-teste/AulaTeste'
 import Componente from './components/componentes/componentes'
 
 
 function App() {
   const [pagina, setPagina] = useState(null)
+  const [output, setOutput] = useState(0)
+
 
   return (
     <div>
-      <h1>Curso React</h1>
+      <h1>Curso React</h1>      
 
       {/* Menu principal */}
       {!pagina && (
@@ -38,7 +40,6 @@ function App() {
       {/* Renderiza a aula escolhida como um "App2" */}
       {pagina === 'aulaTeste' && <AulaTeste />}
       {pagina === 'componentes' && <Componente />}
-   
     </div>
   )
 }
