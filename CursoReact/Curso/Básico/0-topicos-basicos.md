@@ -29,9 +29,9 @@ Use como checklist e espaço para adicionar suas anotações, comentários e exe
 - [✅] Estado com objetos e arrays
 
 ## ✅ Renderização condicional
-- [ ] if / else no JSX
-- [ ] Operador ternário
-- [ ] && para render condicional
+- [✅] if / else no JSX
+- [✅] Operador ternário
+- [✅] && para render condicional
 
 ## ✅ Listas e keys
 - [ ] Renderizando arrays com map

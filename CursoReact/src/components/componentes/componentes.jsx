@@ -7,14 +7,19 @@ import  ComponenteExterno from './components/componenteExterno'
 import { InputControlado, InputNaoControlado } from './components/input'
 import Contador from './components/ComponenteState'
 
+
+//Saudação é um componente escrito no mesmo arquivo do ponto de entrada
 function Saudacao(){
     return <p>Olá, Mundo!</p>
 }
 
+//componente que cria botões com os valores passados pela propriedade texto
 function Botao({ texto = 'novo botão' }) {//note que texto tem um valor default
     return <button>{texto}</button>
 }
 
+
+//componente criado a partir da propriedade clildren passando a estrutura entre as tags de abertura e fechamento do componente
 function Card({ children }) {
     return  <div style={{border:'1px solid black', borderRadius: '10px'}}>
         {children}

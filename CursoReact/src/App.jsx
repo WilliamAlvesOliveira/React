@@ -18,12 +18,11 @@ import './App.css' //importa o app.css
 import {useState } from 'react'
 import AulaTeste from './components/aula-teste/AulaTeste'
 import Componente from './components/componentes/componentes'
+import Condicionais from './components/condicionais/condicionais'
 
 
 function App() {
-  const [pagina, setPagina] = useState(null)
-  const [output, setOutput] = useState(0)
-
+  const [pagina, setPagina] = useState(null) 
 
   return (
     <div>
@@ -34,12 +33,14 @@ function App() {
         <>
           <button onClick={() => setPagina('aulaTeste')}>Aula Teste</button>
           <button onClick={() => setPagina('componentes')}>Aula Componente</button>
+          <button onClick={() => setPagina('condicionais')}>Aula Condicionais</button>
         </>
       )}
 
       {/* Renderiza a aula escolhida como um "App2" */}
       {pagina === 'aulaTeste' && <AulaTeste />}
       {pagina === 'componentes' && <Componente />}
+      {pagina === 'condicionais' && <Condicionais />}
     </div>
   )
 }
