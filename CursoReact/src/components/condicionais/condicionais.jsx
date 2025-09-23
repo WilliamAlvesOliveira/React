@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+
 function CondicionaisCompletas() {
   // Estado para o exemplo inicial Mostrar/Ocultar conteúdo
   const [mostrar, setMostrar] = useState(false)
@@ -9,6 +10,7 @@ function CondicionaisCompletas() {
   const [mostrarTernario, setMostrarTernario] = useState(false)
   const [mostrarAnd, setMostrarAnd] = useState(false)
 
+  const [ativo, setAtivo] = useState(false)
   // Função auxiliar para demonstrar if/else
   function renderIfElse() {
     if (mostrarIfElse) {
@@ -61,16 +63,16 @@ function CondicionaisCompletas() {
       </p>
 
       <pre><code>
-{`// Função auxiliar renderIfElse()
-function renderIfElse() {
-  if (mostrarIfElse) {
-    // Se verdadeiro, retorna JSX azul
-    return <p style={{ color: 'blue' }}>O conteúdo IF/ELSE está sendo exibido!</p>
-  } else {
-    // Se falso, retorna mensagem padrão
-    return <p>Clique no botão para mostrar o conteúdo IF/ELSE.</p>
-  }
-}`}
+        {`// Função auxiliar renderIfElse()
+        function renderIfElse() {
+          if (mostrarIfElse) {
+            // Se verdadeiro, retorna JSX azul
+            return <p style={{ color: 'blue' }}>O conteúdo IF/ELSE está sendo exibido!</p>
+          } else {
+            // Se falso, retorna mensagem padrão
+            return <p>Clique no botão para mostrar o conteúdo IF/ELSE.</p>
+          }
+        }`}
       </code></pre>
 
       {/* Renderização prática */}
@@ -87,11 +89,11 @@ function renderIfElse() {
       </p>
 
       <pre><code>
-{`<p>
-  {mostrarTernario 
-    ? "O conteúdo TERNÁRIO está sendo exibido!"  // se true
-    : "Clique no botão para mostrar o conteúdo TERNÁRIO."} // se false
-</p>`}
+        {`<p>
+          {mostrarTernario 
+            ? "O conteúdo TERNÁRIO está sendo exibido!"  // se true
+            : "Clique no botão para mostrar o conteúdo TERNÁRIO."} // se false
+        </p>`}
       </code></pre>
 
       <p>
@@ -111,9 +113,9 @@ function renderIfElse() {
       </p>
 
       <pre><code>
-{`{mostrarAnd && (
-  <p>O conteúdo && está sendo exibido porque mostrarAnd é true!</p>
-)}`}
+        {`{mostrarAnd && (
+          <p>O conteúdo && está sendo exibido porque mostrarAnd é true!</p>
+        )}`}
       </code></pre>
 
       {mostrarAnd && (
@@ -124,6 +126,51 @@ function renderIfElse() {
       <button onClick={() => setMostrarAnd(!mostrarAnd)}>
         {mostrarAnd ? 'Ocultar' : 'Mostrar'}
       </button>
+
+      <h2>Esilos Dinâmicos</h2>
+
+      <p>
+        No React podemos aplicar <strong>estilos dinâmicos</strong> para que a interface mude de aparência 
+        de acordo com o <code>estado</code> ou com as <code>props</code>. 
+        Isso significa que podemos, por exemplo, deixar um botão verde quando ativo e cinza quando inativo, 
+        sem precisar recarregar a página. Para isso usamos a propriedade 
+        <code>style=</code> diretamente no elemento JSX ou alternamos 
+        <code>className</code> com base em condições. 
+        Dessa forma, o React permite que a lógica e o estilo trabalhem juntos, 
+        tornando os componentes muito mais interativos e personalizados.
+      </p>
+
+      <section className="estilos-dinamicos">
+        <p>
+          Aqui temos um exemplo prático: um botão que muda de cor quando clicado.
+          Se o estado <code>ativo</code> for <code>true</code>, o botão fica verde.
+          Se for <code>false</code>, ele fica cinza.
+        </p>
+
+        {/* Exemplo com style inline */}
+        <button
+          style={{
+            backgroundColor: ativo ? "green" : "gray",
+            color: "white",
+            padding: "10px 20px",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+            marginRight: "10px"
+          }}
+          onClick={() => setAtivo(!ativo)}
+        >
+          {ativo ? "Ativo ✅" : "Inativo ❌"}
+        </button>
+
+        {/* Exemplo com className */}
+        <button
+          className={ativo ? "btn-ativo" : "btn-inativo"}
+          onClick={() => setAtivo(!ativo)}
+        >
+          {ativo ? "Ativo (className)" : "Inativo (className)"}
+        </button>
+      </section>
 
       {/* Footer com instrução de recarregar */}
       <footer style={{ marginTop: '30px' }}>
