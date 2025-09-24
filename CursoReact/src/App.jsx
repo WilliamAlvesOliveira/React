@@ -19,6 +19,7 @@ import {useState } from 'react'
 import AulaTeste from './components/aula-teste/AulaTeste'
 import Componente from './components/componentes/componentes'
 import Condicionais from './components/condicionais/condicionais'
+import Estado from './components/estado/estado'
 
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
           <button onClick={() => setPagina('aulaTeste')}>Aula Teste</button>
           <button onClick={() => setPagina('componentes')}>Aula Componente</button>
           <button onClick={() => setPagina('condicionais')}>Aula Condicionais</button>
+          <button onClick={() => setPagina('estado')}>Aula Estado</button>
+         
         </>
       )}
 
@@ -41,6 +44,7 @@ function App() {
       {pagina === 'aulaTeste' && <AulaTeste />}
       {pagina === 'componentes' && <Componente />}
       {pagina === 'condicionais' && <Condicionais />}
+      {pagina === 'estado' && <Estado />}
     </div>
   )
 }
