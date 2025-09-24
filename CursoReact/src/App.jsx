@@ -20,6 +20,7 @@ import AulaTeste from './components/aula-teste/AulaTeste'
 import Componente from './components/componentes/componentes'
 import Condicionais from './components/condicionais/condicionais'
 import Estado from './components/estado/estado'
+import Listas from './components/listas/listas'
 
 
 function App() {
@@ -32,11 +33,14 @@ function App() {
       {/* Menu principal */}
       {!pagina && (
         <>
-          <button onClick={() => setPagina('aulaTeste')}>Aula Teste</button>
-          <button onClick={() => setPagina('componentes')}>Aula Componente</button>
-          <button onClick={() => setPagina('condicionais')}>Aula Condicionais</button>
-          <button onClick={() => setPagina('estado')}>Aula Estado</button>
-         
+            <h2>Básico</h2>
+          <div id='basics'>
+            <button onClick={() => setPagina('aulaTeste')}>Aula Teste</button>
+            <button onClick={() => setPagina('componentes')}>Aula Componente</button>
+            <button onClick={() => setPagina('condicionais')}>Aula Condicionais</button>
+            <button onClick={() => setPagina('estado')}>Aula Estado</button>
+            <button onClick={() => setPagina('listas')}>Aula listas</button>
+          </div>
         </>
       )}
 
@@ -45,6 +49,7 @@ function App() {
       {pagina === 'componentes' && <Componente />}
       {pagina === 'condicionais' && <Condicionais />}
       {pagina === 'estado' && <Estado />}
+      {pagina === 'listas' && <Listas />}
     </div>
   )
 }
