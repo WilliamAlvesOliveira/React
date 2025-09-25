@@ -21,6 +21,7 @@ import Componente from './components/componentes/componentes'
 import Condicionais from './components/condicionais/condicionais'
 import Estado from './components/estado/estado'
 import Listas from './components/listas/listas'
+import BoasPraticas from './components/boas praticas/boasPraticas'
 
 
 function App() {
@@ -34,13 +35,14 @@ function App() {
       {!pagina && (
         <>
             <h2>Básico</h2>
-          <div id='basics'>
-            <button onClick={() => setPagina('aulaTeste')}>Aula Teste</button>
-            <button onClick={() => setPagina('componentes')}>Aula Componente</button>
-            <button onClick={() => setPagina('condicionais')}>Aula Condicionais</button>
-            <button onClick={() => setPagina('estado')}>Aula Estado</button>
-            <button onClick={() => setPagina('listas')}>Aula listas</button>
-          </div>
+            <div id='basics'>
+              <button onClick={() => setPagina('aulaTeste')}>Aula Teste</button>
+              <button onClick={() => setPagina('componentes')}>Aula Componente</button>
+              <button onClick={() => setPagina('condicionais')}>Aula Condicionais</button>
+              <button onClick={() => setPagina('estado')}>Aula Estado</button>
+              <button onClick={() => setPagina('listas')}>Aula listas</button>
+              <button onClick={() => setPagina('boasPraticas')}>Aula Boas Práticas</button>
+            </div>
         </>
       )}
 
@@ -50,6 +52,7 @@ function App() {
       {pagina === 'condicionais' && <Condicionais />}
       {pagina === 'estado' && <Estado />}
       {pagina === 'listas' && <Listas />}
+      {pagina === 'boasPraticas' && <BoasPraticas />}
     </div>
   )
 }

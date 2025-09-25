@@ -2,10 +2,23 @@
 import { useState } from "react";
 
 // ====================================================
-// 1) LISTAS EM REACT
+// 📌 INTRODUÇÃO
+// ====================================================
+//
+// No React, listas aparecem o tempo todo: menus, tabelas, cards, etc.
+// Para renderizar listas, usamos o método .map() do JavaScript.
+// Ele percorre um array e transforma cada item em um elemento React.
+//
+// Vantagens do uso de listas + map():
+// ✅ Código mais enxuto e legível
+// ✅ Fácil de manter e reutilizar
+// ✅ Reatividade: se o array mudar, a UI muda junto
+// ✅ Permite aplicar transformações (filtrar, ordenar, adicionar)
+//
+// ====================================================
+// 1) LISTA SIMPLES
 // ====================================================
 
-// Um exemplo simples: renderizando uma lista de strings
 function ListaSimples() {
   const frutas = ["Maçã", "Banana", "Laranja", "Uva"];
 
@@ -19,10 +32,13 @@ function ListaSimples() {
 }
 
 // ====================================================
-// 2) KEYS (CHAVES ÚNICAS)
+// 2) KEYS (CHAVES ÚNICAS) — BOA PRÁTICA
 // ====================================================
+//
+// O React precisa de "keys" para identificar cada item da lista.
+// Sempre que possível, use um ID único do seu dado em vez do índice.
+//
 
-// Exemplo com objetos e IDs únicos
 function ListaComObjetos() {
   const usuarios = [
     { id: 1, nome: "Ana" },
@@ -40,8 +56,13 @@ function ListaComObjetos() {
 }
 
 // ====================================================
-// 3) USANDO INDEX COMO KEY (E OS PROBLEMAS DISSO)
+// 3) USANDO INDEX COMO KEY — ⚠️ CUIDADO!
 // ====================================================
+//
+// O index pode ser usado como key em listas fixas.
+// Mas em listas dinâmicas (com adição/remoção), isso pode causar bugs:
+// o React pode "reciclar" o elemento errado.
+//
 
 function ListaComIndex() {
   const [nomes, setNomes] = useState(["João", "Pedro", "Lucas"]);
@@ -59,16 +80,19 @@ function ListaComIndex() {
         ))}
       </ul>
       <p style={{ fontSize: "12px", color: "#666" }}>
-        ⚠️ Usar o índice como key pode causar problemas em listas dinâmicas
-        (quando itens mudam de posição, são removidos ou adicionados).
+        ⚠️ Usar índice como key pode causar problemas quando os itens mudam de
+        posição, são removidos ou adicionados.
       </p>
     </div>
   );
 }
 
 // ====================================================
-// 4) LISTA COM COMPONENTES REUTILIZÁVEIS
+// 4) LISTAS COM COMPONENTES REUTILIZÁVEIS
 // ====================================================
+//
+// Podemos mapear arrays para componentes, deixando o código limpo.
+//
 
 function Usuario({ nome, email }) {
   return (
@@ -95,8 +119,11 @@ function ListaUsuarios() {
 }
 
 // ====================================================
-// 5) ATUALIZAÇÃO DINÂMICA DE LISTAS
+// 5) ATUALIZAÇÃO DINÂMICA
 // ====================================================
+//
+// O poder do map fica claro em listas que mudam com o estado.
+//
 
 function ListaDinamica() {
   const [tarefas, setTarefas] = useState([
@@ -132,8 +159,11 @@ function ListaDinamica() {
 }
 
 // ====================================================
-// 6) LISTAS E COMPONENTES CONTROLADOS
+// 6) FORMULÁRIO CONTROLADO + LISTA
 // ====================================================
+//
+// Combinação prática: adicionar itens via input.
+//
 
 function ListaComForm() {
   const [input, setInput] = useState("");
@@ -167,13 +197,52 @@ function ListaComForm() {
 }
 
 // ====================================================
-// COMPONENTE PRINCIPAL (AULA SOBRE LISTAS)
+// 7) TRANSFORMAÇÕES EM LISTAS (EXTRA)
+// ====================================================
+//
+// Podemos usar map junto com filter, sort, etc.
+//
+
+function ListaTransformada() {
+  const numeros = [1, 2, 3, 4, 5, 6];
+
+  return (
+    <div>
+      <h4>Números originais:</h4>
+      <p>{numeros.join(", ")}</p>
+
+      <h4>Dobro de cada número:</h4>
+      <ul>
+        {numeros.map((n) => (
+          <li key={n}>{n * 2}</li>
+        ))}
+      </ul>
+
+      <h4>Apenas pares:</h4>
+      <ul>
+        {numeros
+          .filter((n) => n % 2 === 0)
+          .map((n) => (
+            <li key={n}>{n}</li>
+          ))}
+      </ul>
+    </div>
+  );
+}
+
+// ====================================================
+// COMPONENTE PRINCIPAL
 // ====================================================
 
 function Listas() {
   return (
     <section className="listas">
-      <h2>Trabalhando com Listas e Keys no React</h2>
+      <h2>🔑 Trabalhando com Listas e o método map() no React</h2>
+      <p>
+        Nesta aula, vamos aprender como renderizar listas no React, por que usar
+        o método <code>map()</code>, como lidar com keys e como atualizar listas
+        dinamicamente.
+      </p>
 
       <div>
         <h3>1) Renderizando uma lista simples</h3>
@@ -215,9 +284,17 @@ function Listas() {
         <ListaComForm />
       </div>
 
+      <hr />
+
+      <div>
+        <h3>7) Transformando listas com map, filter e sort</h3>
+        <ListaTransformada />
+      </div>
+
       <footer>
         <p style={{ fontSize: "12px", color: "#666" }}>
-          ⚡ Recarregue a página para resetar os exemplos.
+          ⚡ Recarregue a página para resetar os exemplos. <br />
+          ✅ Dica final: sempre que possível use IDs únicos como key!
         </p>
       </footer>
     </section>
